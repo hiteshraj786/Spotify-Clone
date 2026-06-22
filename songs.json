@@ -2,17 +2,22 @@
     "folders": [
         {
             "name": "A.R. Rahaman",
-            "title": "This Is A.R. Rahaman",
-            "description": "This is A.R. Rahaman. The essential tracks, all in one playlist.",
             "songs": [
+                "Aawaara Angaara - A.R. Rahman.mp3",
+                "Chaiya Chaiya - A.R. Rahaman｜Sukhwinder Singh.mp3",
                 "Challa - A. R. Rahman.mp3",
-                "Jai Ho - A.R. Rahaman.mp3"
+                "Deewaana Deewaana - A.R. Rahaman.mp3",
+                "Jai Ho - A.R. Rahaman.mp3",
+                "Luka Chuppi - A.R. Rahman Lata Mangeshkar.mp3",
+                "Maahi Ve - A.R. Rahaman.mp3",
+                "Raanjhanaa - A. R. Rahman  Jaswinder Singh.mp3",
+                "Tere Bina - A.R. Rahaman.mp3",
+                "Tu Hai - A.R. Rahaman.mp3",
+                "Yeh Jo Des Hai Tera - A.R. Rahaman.mp3"
             ]
         },
         {
             "name": "Aditya Gadhvi",
-            "title": "This Is Aditya Gadhvi",
-            "description": "This is Aditya Gadhvi. The essential tracks, all in one playlist.",
             "songs": [
                 "Chotile Dakla Vaagya - Aditya Gadhvi.mp3",
                 "Diamond Ni - Aditya Gadhvi.mp3",
@@ -41,8 +46,6 @@
         },
         {
             "name": "Akhil Sachdeva",
-            "title": "This Is Akhil Sachdeva",
-            "description": "This is Akhil Sachdeva. The essential tracks, all in one playlist.",
             "songs": [
                 "Channa Ve - Akhil Sachdeva.mp3",
                 "Humsafar - Akhil Sachdeva.mp3",
@@ -53,22 +56,16 @@
         },
         {
             "name": "Amit Trivedi",
-            "title": "This Is Amit Trivedi",
-            "description": "This is Amit Trivedi. The essential tracks, all in one playlist.",
             "songs": [
                 "Pashmina - Amit Trivedi.mp3"
             ]
         },
         {
             "name": "Ankit Tiwari",
-            "title": "This Is Ankit Tiwari",
-            "description": "This is Ankit Tiwari. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "AP Dhillon",
-            "title": "This Is AP Dhillon",
-            "description": "This is AP Dhillon. The essential tracks, all in one playlist.",
             "songs": [
                 "AADAT - YO YO HONEY I SINGH AP DHILLON.mp3",
                 "AFSOS - Anuv Jain I AP Dhillon.mp3",
@@ -96,86 +93,56 @@
         },
         {
             "name": "Arjit Singh",
-            "title": "This Is Arjit Singh",
-            "description": "This is Arjit Singh. The essential tracks, all in one playlist.",
-            "songs": [
-                "Yeh Fitoor Mera - Arjit Singh.mp3"
-            ]
+            "songs": []
         },
         {
             "name": "Armaan Malik",
-            "title": "This Is Armaan Malik",
-            "description": "This is Armaan Malik. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Ash King",
-            "title": "This Is Ash King",
-            "description": "This is Ash King. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Atif Aslam",
-            "title": "This Is Atif Aslam",
-            "description": "This is Atif Aslam. The essential tracks, all in one playlist.",
-            "songs": [
-                "Pehli Dafa - Atif Aslam.mp3"
-            ]
+            "songs": []
         },
         {
             "name": "Darshan Raval",
-            "title": "This Is Darshan Raval",
-            "description": "This is Darshan Raval. The essential tracks, all in one playlist.",
             "songs": [
                 "Only Mine - Darshan.mp3"
             ]
         },
         {
             "name": "Diljit Dosanjh",
-            "title": "This Is Diljit Dosanjh",
-            "description": "This is Diljit Dosanjh. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Dino James",
-            "title": "This Is Dino James",
-            "description": "This is Dino James. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Guru Randhawa",
-            "title": "This Is Guru Randhawa",
-            "description": "This is Guru Randhawa. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Himesh Reshammiya",
-            "title": "This Is Himesh Reshammiya",
-            "description": "This is Himesh Reshammiya. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Honey Singh",
-            "title": "This Is Honey Singh",
-            "description": "This is Honey Singh. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Jasmine Sandlas",
-            "title": "This Is Jasmine Sandlas",
-            "description": "This is Jasmine Sandlas. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Javed Ali",
-            "title": "This Is Javed Ali",
-            "description": "This is Javed Ali. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Karan Aujla",
-            "title": "This Is Karan Aujla",
-            "description": "This is Karan Aujla. The essential tracks, all in one playlist.",
             "songs": [
                 "52 Bars - Karan Aujla.mp3",
                 "100 Million - DIVINE, KARAN AUJLA.mp3",
@@ -202,100 +169,68 @@
         },
         {
             "name": "KK",
-            "title": "This Is KK",
-            "description": "This is KK. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Mohit Chauhan",
-            "title": "This Is Mohit Chauhan",
-            "description": "This is Mohit Chauhan. The essential tracks, all in one playlist.",
             "songs": [
                 "Jo bhi main - Mohit Chauhan.mp3"
             ]
         },
         {
             "name": "Neeti Mohan",
-            "title": "This Is Neeti Mohan",
-            "description": "This is Neeti Mohan. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Papon",
-            "title": "This Is Papon",
-            "description": "This is Papon. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Pritam",
-            "title": "This Is Pritam",
-            "description": "This is Pritam. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Rahat Fateh Ali Khan",
-            "title": "This Is Rahat Fateh Ali Khan",
-            "description": "This is Rahat Fateh Ali Khan. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Seema Mishra",
-            "title": "This Is Seema Mishra",
-            "description": "This is Seema Mishra. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Shaan",
-            "title": "This Is Shaan",
-            "description": "This is Shaan. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Shafqat Amanat Ali",
-            "title": "This Is Shafqat Amanat Ali",
-            "description": "This is Shafqat Amanat Ali. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Shreya Ghoshal",
-            "title": "This Is Shreya Ghoshal",
-            "description": "This is Shreya Ghoshal. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Sonu Nigam",
-            "title": "This Is Sonu Nigam",
-            "description": "This is Sonu Nigam. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Sunidhi Chauhan",
-            "title": "This Is Sunidhi Chauhan",
-            "description": "This is Sunidhi Chauhan. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Talwiinder",
-            "title": "This Is Talwiinder",
-            "description": "This is Talwiinder. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Udit Narayan",
-            "title": "This Is Udit Narayan",
-            "description": "This is Udit Narayan. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Vishal Mishra",
-            "title": "This Is Vishal Mishra",
-            "description": "This is Vishal Mishra. The essential tracks, all in one playlist.",
             "songs": []
         },
         {
             "name": "Vishal-Shekhar",
-            "title": "This Is Vishal-Shekhar",
-            "description": "This is Vishal-Shekhar. The essential tracks, all in one playlist.",
             "songs": []
         }
     ]
