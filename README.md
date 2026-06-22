@@ -15,6 +15,10 @@
   <img src="https://img.shields.io/badge/Responsive-Mobile%20Ready-1DB954?style=for-the-badge" alt="Responsive" />
 </p>
 
+<h3 align="center">
+  🔴 <a href="https://hitmelody.netlify.app/" target="_blank">Live Demo</a>
+</h3>
+
 ---
 
 ## 📸 Screenshots
