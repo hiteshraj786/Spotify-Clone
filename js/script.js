@@ -186,9 +186,6 @@ async function displayAlbum() {
     for (const folder of data.folders) {
         if (folder.songs.length === 0) continue;
 
-        let infoRes = await fetch(`songs/${folder.name}/info.json`);
-        let info = await infoRes.json();
-
         cardContainer.innerHTML += `
         <div data-folder="${folder.name}" class="card">
             <div class="play">
@@ -198,8 +195,8 @@ async function displayAlbum() {
                 </svg>
             </div>
             <img src="songs/${folder.name}/cover.jpg" alt="${folder.name}" />
-            <h3>${info.title}</h3>
-            <p>${info.description}</p>
+            <h3>${folder.title}</h3>
+            <p>${folder.description}</p>
         </div>`;
     }
 }
