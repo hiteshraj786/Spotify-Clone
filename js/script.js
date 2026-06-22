@@ -25,20 +25,13 @@ function formatTime(seconds) {
 // fetch the list of all the songs from the local directory and return the list of songs
 async function getSongs(folder) {
     currfolder = folder;
-    let a = await fetch(`songs/${folder}`)
-    let response = await a.text();
-    let div = document.createElement('div');
-    div.innerHTML = response;
-    let as = div.getElementsByTagName('a');
+    let response = await fetch("songs.json");
+    let data = await response.json();
+    let folderData = data.folders.find(f => f.name === folder);
     songs = [];
     liElements = [];
-    for (let i = 0; i < as.length; i++) {
-        const element = as[i];
-        if (element.href.endsWith('.mp3')) {
-            let encodedFolder = encodeURIComponent(folder); // "Atif%20Aslam"
-            songs.push(element.href.split(`/${encodedFolder}/`)[1]);
-        }
-    }
+    songs = folderData ? folderData.songs : [];
+
     // display the list of songs in the UI
 
     let songUl = document.querySelector('.songList').getElementsByTagName('ul')[0];
@@ -186,41 +179,29 @@ async function showInitialSongInfo(track, startpaused = false) {
 }
 
 async function displayAlbum() {
-    let a = await fetch("songs/");
+    let response = await fetch("songs.json");
+    let data = await response.json();
     let cardContainer = document.querySelector('.cardContainer');
-    let response = await a.text();
-    let div = document.createElement('div');
-    div.innerHTML = response;
 
-    let anchors = div.getElementsByTagName('a');
-    let array = Array.from(anchors);
+    for (const folder of data.folders) {
+        if (folder.songs.length === 0) continue;
 
-    for (let i = 0; i < array.length; i++) {
-        let e = array[i];
-        if ((e.href).includes('/songs/')) {
-            let folderName = decodeURIComponent(e.href.split('/').slice(-2)[1]);
+        let infoRes = await fetch(`songs/${folder.name}/info.json`);
+        let info = await infoRes.json();
 
-            let a = await fetch(`songs/${folderName}/info.json`);
-            let response = await a.json();
-
-            cardContainer.innerHTML += ` 
-            <div data-folder="${folderName}" class="card">
+        cardContainer.innerHTML += `
+        <div data-folder="${folder.name}" class="card">
             <div class="play">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="75" height="75">
                 <circle cx="12" cy="12" r="10" fill="#2ECC71" />
                 <path d="M9.5 8L16.5 12L9.5 16V8Z" fill="black" />
                 </svg>
             </div>
-            <img
-                src="songs/${folderName}/cover.jpg"
-                alt="Playlist 1" />
-            <h3>${response.title}</h3>
-            <p>${response.description}</p>
-            </div>`
-
-        }
+            <img src="songs/${folder.name}/cover.jpg" alt="${folder.name}" />
+            <h3>${info.title}</h3>
+            <p>${info.description}</p>
+        </div>`;
     }
-
 }
 
 async function main() {
