@@ -208,10 +208,15 @@ async function main() {
     // dispay the list of songs in the UI
     await displayAlbum();
 
-    // get the list of all the song 
-    await getSongs("Atif Aslam");
+    // find the first artist with songs and load them
+    let songsData = await fetch("songs.json").then(r => r.json());
+    let firstWithSongs = songsData.folders.find(f => f.songs.length > 0);
+    let defaultFolder = firstWithSongs ? firstWithSongs.name : songsData.folders[0].name;
 
-    // show default pasued song info in the UI
+    // get the list of all the songs
+    await getSongs(defaultFolder);
+
+    // show default paused song info in the UI
     if (songs.length === 0) {
         document.querySelector('.songInfo').innerHTML = "No songs found";
         return;
