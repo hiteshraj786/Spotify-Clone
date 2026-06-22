@@ -184,7 +184,9 @@ async function displayAlbum() {
     let cardContainer = document.querySelector('.cardContainer');
 
     for (const folder of data.folders) {
-        if (folder.songs.length === 0) continue;
+
+        let title = folder.title || `This Is ${folder.name}`;
+        let description = folder.description || `This is ${folder.name}. The essential tracks, all in one playlist.`;
 
         cardContainer.innerHTML += `
         <div data-folder="${folder.name}" class="card">
@@ -195,8 +197,8 @@ async function displayAlbum() {
                 </svg>
             </div>
             <img src="songs/${folder.name}/cover.jpg" alt="${folder.name}" />
-            <h3>${folder.title}</h3>
-            <p>${folder.description}</p>
+            <h3>${title}</h3>
+            <p>${description}</p>
         </div>`;
     }
 }
