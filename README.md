@@ -19,11 +19,15 @@
 
 ## 📸 Screenshots
 
-| Desktop View | Mobile View |
-|:---:|:---:|
-| ![Desktop](https://github.com/user-attachments/assets/desktop-placeholder.png) | ![Mobile](https://github.com/user-attachments/assets/mobile-placeholder.png) |
+### 🖥️ Desktop View
+<p align="center">
+  <img src="screenshots/desktop-view.png" alt="Spotify Clone - Desktop View" width="90%"/>
+</p>
 
-> **Note:** Replace the placeholder images above with actual screenshots of your app.
+### 📱 Mobile View
+<p align="center">
+  <img src="screenshots/mobile-view.jpg" alt="Spotify Clone - Mobile View" width="300"/>
+</p>
 
 ---
 
