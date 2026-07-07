@@ -443,7 +443,7 @@ input[type="range"] {
 }
 
 /* thumb - woh circle jo drag karte hain */
-input[type="range"]::-webkit-slider-thumb {
+/* input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 12px;
@@ -451,8 +451,20 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     background: white;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0; */
     /* default hidden */
+    /* transition: opacity 0.2s;
+} */
+
+    input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    opacity: 0;
     transition: opacity 0.2s;
 }
 
@@ -638,12 +650,12 @@ input[type="range"]:hover::-webkit-slider-thumb {
     }
 
 }
-@media (min-width: 1251px) {
+/* @media (min-width: 1251px) {
     .songInfo span {
         animation: none;
         padding-left: 0;
     }
-}
+} */
 
 @media (max-width: 800px) {
     .spotifyPlaylist .card {

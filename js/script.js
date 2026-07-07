@@ -272,12 +272,13 @@ async function main() {
 
 
     // add event listener to the seekbar 
-    document.querySelector('.seekBar').addEventListener('click', (e) => {
-        percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
+        document.querySelector('.seekBar').addEventListener('click', (e) => {
+            let rect = e.currentTarget.getBoundingClientRect();
+            percent = ((e.clientX - rect.left) / rect.width) * 100;
 
-        progress = percent;
-        document.querySelector('.circle').style.left = percent + "%";
-        currentAudio.currentTime = (percent / 100) * currentAudio.duration;
+            progress = percent;
+            document.querySelector('.circle').style.left = `calc(${percent}% - 6px)`;
+            currentAudio.currentTime = (percent / 100) * currentAudio.duration;
 
         if (window.matchMedia("(hover: none)").matches) {
             document.querySelector('.seekBar').style.background =
@@ -400,6 +401,9 @@ async function main() {
         volumeBar.style.background =
             `linear-gradient(to right, white 0%, white ${val}%, #555 ${val}%, #555 100%)`;
     });
+
+    volumeBar.style.background = 
+    `linear-gradient(to right, white 0%, white 50%, #555 50%, #555 100%)`;
 
 }
 
