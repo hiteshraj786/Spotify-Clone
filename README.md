@@ -16,7 +16,7 @@
 </p>
 
 <h3 align="center">
-  🔴 <a href="https://hitmelody.netlify.app/" target="_blank">Live Demo</a>
+  🔴 <a href="https://spotify-clone-indol-zeta.vercel.app/" target="_blank">Live Demo</a>
 </h3>
 
 ---
