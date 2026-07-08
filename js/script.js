@@ -62,7 +62,6 @@ async function getSongs(folder) {
                 currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
                 currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
                 currentLi.getElementsByTagName('img')[0].classList.add('invert');
-
                 currentLi.classList.remove('active');
             }
 
@@ -131,8 +130,8 @@ async function showInitialSongInfo(track, startpaused = false) {
     console.log("trackIndex:", songs.indexOf(track));
     console.log("liElements length:", liElements.length);
 
-    document.querySelector('.songInfo').innerHTML = `<span>${info.song} - ${info.artist}</span>`;
-    document.querySelector('.songTime').innerHTML = "00:00 / 00:00";
+    // document.querySelector('.songInfo').innerHTML = `<span>${info.song} - ${info.artist}</span>`;
+    // document.querySelector('.songTime').innerHTML = "00:00 / 00:00";
 
 
     if (currentLi) {
@@ -156,7 +155,7 @@ async function showInitialSongInfo(track, startpaused = false) {
 
     progress = 0;
     document.querySelector('.circle').style.left = `calc(0% - 6px)`;
-    document.querySelector('.seekBar').style.background = 
+    document.querySelector('.seekBar').style.background =
         `linear-gradient(to right, white 0%, white 0%, #555 0%, #555 100%)`;
 
 
@@ -180,7 +179,7 @@ async function showInitialSongInfo(track, startpaused = false) {
                 title: info.song,
                 artist: info.artist,
             });
-             navigator.mediaSession.playbackState = 'playing';
+            navigator.mediaSession.playbackState = 'playing';
         }
     }
     else {
@@ -286,13 +285,13 @@ async function main() {
 
 
     // add event listener to the seekbar 
-        document.querySelector('.seekBar').addEventListener('click', (e) => {
-            let rect = e.currentTarget.getBoundingClientRect();
-            percent = ((e.clientX - rect.left) / rect.width) * 100;
+    document.querySelector('.seekBar').addEventListener('click', (e) => {
+        let rect = e.currentTarget.getBoundingClientRect();
+        percent = ((e.clientX - rect.left) / rect.width) * 100;
 
-            progress = percent;
-            document.querySelector('.circle').style.left = `calc(${percent}% - 6px)`;
-            currentAudio.currentTime = (percent / 100) * currentAudio.duration;
+        progress = percent;
+        document.querySelector('.circle').style.left = `calc(${percent}% - 6px)`;
+        currentAudio.currentTime = (percent / 100) * currentAudio.duration;
 
         if (window.matchMedia("(hover: none)").matches) {
             document.querySelector('.seekBar').style.background =
@@ -305,13 +304,13 @@ async function main() {
     // add event listener to the hameburger menu
     document.querySelector(".hameBurger").addEventListener("click", (e) => {
         document.querySelector(".left").style.left = "0";
-         isHovering = false; 
+        isHovering = false;
     });
 
     // add event listener to the close button of the left 
     document.querySelector('.close').addEventListener('click', (e) => {
         document.querySelector('.left').style.left = "-100%";
-        isHovering = false; 
+        isHovering = false;
     })
 
     //  add event litener to the previous button
@@ -416,47 +415,47 @@ async function main() {
             `linear-gradient(to right, white 0%, white ${val}%, #555 ${val}%, #555 100%)`;
     });
 
-    volumeBar.style.background = 
-    `linear-gradient(to right, white 0%, white 50%, #555 50%, #555 100%)`;
+    volumeBar.style.background =
+        `linear-gradient(to right, white 0%, white 50%, #555 50%, #555 100%)`;
 
 
-if ('mediaSession' in navigator) {
-    navigator.mediaSession.setActionHandler('play', () => {
-        currentAudio.play();
-        navigator.mediaSession.playbackState = 'playing'; // yeh add karo
-        document.getElementById('play').src = "img/pausesong.svg"; // getElementById use karo
-        if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
-        if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
-        if (currentLi) currentLi.getElementsByTagName('img')[0].classList.remove('invert');
-    });
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', () => {
+            currentAudio.play();
+            navigator.mediaSession.playbackState = 'playing'; 
+            document.getElementById('play').src = "img/pausesong.svg"; 
+            if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
+            if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
+            if (currentLi) currentLi.getElementsByTagName('img')[0].classList.remove('invert');
+        });
 
-    navigator.mediaSession.setActionHandler('pause', () => {
-        currentAudio.pause();
-        navigator.mediaSession.playbackState = 'paused'; // yeh add karo
-        document.getElementById('play').src = "img/playsong.svg"; // getElementById use karo
-        if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
-        if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
-        if (currentLi) currentLi.getElementsByTagName('img')[0].classList.add('invert');
-    });
+        navigator.mediaSession.setActionHandler('pause', () => {
+            currentAudio.pause();
+            navigator.mediaSession.playbackState = 'paused'; 
+            document.getElementById('play').src = "img/playsong.svg"; 
+            if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
+            if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
+            if (currentLi) currentLi.getElementsByTagName('img')[0].classList.add('invert');
+        });
 
-    navigator.mediaSession.setActionHandler('previoustrack', () => {
-        let currentIndex = songs.indexOf(currentSong);
-        if (currentIndex > 0) {
-            showInitialSongInfo(songs[currentIndex - 1]);
-        } else {
-            showInitialSongInfo(songs[songs.length - 1]);
-        }
-    });
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+            let currentIndex = songs.indexOf(currentSong);
+            if (currentIndex > 0) {
+                showInitialSongInfo(songs[currentIndex - 1]);
+            } else {
+                showInitialSongInfo(songs[songs.length - 1]);
+            }
+        });
 
-    navigator.mediaSession.setActionHandler('nexttrack', () => {
-        let currentIndex = songs.indexOf(currentSong);
-        if (currentIndex < songs.length - 1) {
-            showInitialSongInfo(songs[currentIndex + 1]);
-        } else {
-            showInitialSongInfo(songs[0]);
-        }
-    });
-}
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+            let currentIndex = songs.indexOf(currentSong);
+            if (currentIndex < songs.length - 1) {
+                showInitialSongInfo(songs[currentIndex + 1]);
+            } else {
+                showInitialSongInfo(songs[0]);
+            }
+        });
+    }
 
 }
 
