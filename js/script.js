@@ -175,6 +175,7 @@ async function showInitialSongInfo(track, startpaused = false) {
                 title: info.song,
                 artist: info.artist,
             });
+             navigator.mediaSession.playbackState = 'playing';
         }
     }
     else {
@@ -414,10 +415,11 @@ async function main() {
     `linear-gradient(to right, white 0%, white 50%, #555 50%, #555 100%)`;
 
 
-    if ('mediaSession' in navigator) {
+if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('play', () => {
         currentAudio.play();
-        play.src = "img/pausesong.svg";
+        navigator.mediaSession.playbackState = 'playing'; // yeh add karo
+        document.getElementById('play').src = "img/pausesong.svg"; // getElementById use karo
         if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
         if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
         if (currentLi) currentLi.getElementsByTagName('img')[0].classList.remove('invert');
@@ -425,7 +427,8 @@ async function main() {
 
     navigator.mediaSession.setActionHandler('pause', () => {
         currentAudio.pause();
-        play.src = "img/playsong.svg";
+        navigator.mediaSession.playbackState = 'paused'; // yeh add karo
+        document.getElementById('play').src = "img/playsong.svg"; // getElementById use karo
         if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
         if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
         if (currentLi) currentLi.getElementsByTagName('img')[0].classList.add('invert');
