@@ -168,6 +168,14 @@ async function showInitialSongInfo(track, startpaused = false) {
         currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
         currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
         currentLi.getElementsByTagName('img')[0].classList.remove('invert');
+
+        if ('mediaSession' in navigator) {
+            let info = getSongInfo(track);
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: info.song,
+                artist: info.artist,
+            });
+        }
     }
     else {
         currentAudio.load();
@@ -404,6 +412,43 @@ async function main() {
 
     volumeBar.style.background = 
     `linear-gradient(to right, white 0%, white 50%, #555 50%, #555 100%)`;
+
+
+    if ('mediaSession' in navigator) {
+    navigator.mediaSession.setActionHandler('play', () => {
+        currentAudio.play();
+        play.src = "img/pausesong.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[0].classList.remove('invert');
+    });
+
+    navigator.mediaSession.setActionHandler('pause', () => {
+        currentAudio.pause();
+        play.src = "img/playsong.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
+        if (currentLi) currentLi.getElementsByTagName('img')[0].classList.add('invert');
+    });
+
+    navigator.mediaSession.setActionHandler('previoustrack', () => {
+        let currentIndex = songs.indexOf(currentSong);
+        if (currentIndex > 0) {
+            showInitialSongInfo(songs[currentIndex - 1]);
+        } else {
+            showInitialSongInfo(songs[songs.length - 1]);
+        }
+    });
+
+    navigator.mediaSession.setActionHandler('nexttrack', () => {
+        let currentIndex = songs.indexOf(currentSong);
+        if (currentIndex < songs.length - 1) {
+            showInitialSongInfo(songs[currentIndex + 1]);
+        } else {
+            showInitialSongInfo(songs[0]);
+        }
+    });
+}
 
 }
 
