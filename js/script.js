@@ -130,6 +130,11 @@ async function showInitialSongInfo(track, startpaused = false) {
     console.log("songs array:", songs);
     console.log("trackIndex:", songs.indexOf(track));
     console.log("liElements length:", liElements.length);
+
+    document.querySelector('.songInfo').innerHTML = `<span>${info.song} - ${info.artist}</span>`;
+    document.querySelector('.songTime').innerHTML = "00:00 / 00:00";
+
+
     if (currentLi) {
         currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
         currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
