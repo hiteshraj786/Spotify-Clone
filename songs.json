@@ -368,10 +368,6 @@
         },
         {
             "name": "Vishal Mishra",
-            "songs": []
-        },
-        {
-            "name": "Vishal-Shekhar",
             "songs": [
                 "MANJHA - Vishal Mishra.mp3",
                 "Khoobsurat - Vishal Mishra.mp3",
@@ -380,6 +376,12 @@
                 "Janiye - Vishal Mishra.mp3",
                 "Kaise Hua - Vishal Mishra.mp3",
                 "Tum Ho Toh - Vishal Mishra.mp3"
+            ]
+        },
+        {
+            "name": "Vishal-Shekhar",
+            "songs": [
+   
 
 
             ]
