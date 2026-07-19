@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/utility.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1DB954">
   <title>Spotify - Web Player: Music for everyone </title>
 </head>
 
@@ -25,7 +27,7 @@
         </div>
         <ul>
           <li><img class="invert" src="img/home.svg" alt="Home" />Home</li>
-          <li><img class="invert" src="img/search.svg" alt="Search" />Search</li>
+          <li id="installBtn" style="display:none;"><img class="invert" src="img/download.svg" alt="Install" />Install App</li>
         </ul>
       </div>
       <div class="library bg-grey rounded m-1 p-1">
@@ -133,6 +135,39 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script>
+    // PWA: Register Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch((err) => console.log('SW registration failed:', err));
+    }
+
+    // PWA: Install Prompt
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'flex';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log('Install outcome:', outcome);
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.style.display = 'none';
+      console.log('App installed successfully!');
+    });
+  </script>
 </body>
 
 </html>
