@@ -134,6 +134,26 @@
     </div>
   </div>
 
+  <!-- Toast Notification -->
+  <div id="toast" style="
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1DB954;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+    white-space: nowrap;
+  ">✅ App Installed Successfully!</div>
+
   <script src="js/script.js"></script>
   <script>
     // PWA: Register Service Worker
@@ -153,11 +173,26 @@
       installBtn.style.display = 'flex';
     });
 
+    // Toast function
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(20px)';
+      }, 3000);
+    }
+
     installBtn.addEventListener('click', async () => {
       if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         console.log('Install outcome:', outcome);
+        if (outcome === 'accepted') {
+          showToast('✅ App Installed Successfully!');
+        }
         deferredPrompt = null;
         installBtn.style.display = 'none';
       }
@@ -165,6 +200,7 @@
 
     window.addEventListener('appinstalled', () => {
       installBtn.style.display = 'none';
+      showToast('✅ HitMelody App Installed!');
       console.log('App installed successfully!');
     });
   </script>
