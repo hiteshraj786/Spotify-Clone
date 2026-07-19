@@ -276,6 +276,12 @@ async function main() {
         document.querySelector('.circle').style.left = `calc(${progress}% - 6px)`;
         if (!isHovering) {
             document.querySelector('.seekBar').style.background = `linear-gradient(to right, white 0%, white ${progress}%, #555 ${progress}%, #555 100%)`;
+        } 
+        else {
+            let seekBar = document.querySelector('.seekBar');
+            let hoverPercent = parseFloat(seekBar.dataset.hoverPercent || progress);
+            seekBar.style.background =
+                `linear-gradient(to right, #1DB954 0%, #1DB954 ${progress}%, #B3B3B3 ${progress}%, #B3B3B3 ${hoverPercent}%, #535353 ${hoverPercent}%, #535353 100%)`;
         }
         if (currentAudio.currentTime === currentAudio.duration) {
             let nextIndex = (songs.indexOf(currentSong) + 1) % songs.length;
@@ -349,6 +355,7 @@ async function main() {
         document.querySelector('.circle').style.opacity = 1;
         if (!currentAudio.duration) return;
         let playpercent = (e.offsetX / seekBar.getBoundingClientRect().width) * 100;
+        seekBar.dataset.hoverPercent = playpercent;
         seekBar.style.background =
             `linear-gradient(
             to right,
@@ -422,8 +429,8 @@ async function main() {
     if ('mediaSession' in navigator) {
         navigator.mediaSession.setActionHandler('play', () => {
             currentAudio.play();
-            navigator.mediaSession.playbackState = 'playing'; 
-            document.getElementById('play').src = "img/pausesong.svg"; 
+            navigator.mediaSession.playbackState = 'playing';
+            document.getElementById('play').src = "img/pausesong.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/pausesong.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/playing.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[0].classList.remove('invert');
@@ -431,8 +438,8 @@ async function main() {
 
         navigator.mediaSession.setActionHandler('pause', () => {
             currentAudio.pause();
-            navigator.mediaSession.playbackState = 'paused'; 
-            document.getElementById('play').src = "img/playsong.svg"; 
+            navigator.mediaSession.playbackState = 'paused';
+            document.getElementById('play').src = "img/playsong.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[1].src = "img/playsong.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[0].src = "img/music.svg";
             if (currentLi) currentLi.getElementsByTagName('img')[0].classList.add('invert');
