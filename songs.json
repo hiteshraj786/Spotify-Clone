@@ -205,7 +205,8 @@
                 "Main Rahoon - Armaan Malik.mp3",
                 "Pehla Pyaar - Armaan Malik.mp3",
                 "SAB TERA - Armaan Malik.mp3",
-                "WAJAH TUM HO - Armaan Malik.mp3"
+                "WAJAH TUM HO - Armaan Malik.mp3",
+                "Sau Aasmaan - Armaan Malik"
 
 
 
@@ -213,7 +214,20 @@
         },
         {
             "name": "Ash King",
-            "songs": []
+            "songs": [
+                "Baarish - Ash King.mp3",
+                "Bandook Meri Laila - Ash King.mp3",
+                "Haaye Oye - QARAN I Ash King.mp3",
+                "I love you - Ash King.mp3",
+                "Kill Chori - Ash King.mp3",
+                "Meherbaan - Vishal Shekhar I Ash King.mp3",
+                "Mera Yaar - Dhvani Bhanushali I Ash King.mp3",
+                "Nazar Na Lag Jaaye - Ash King.mp3",
+                "Neele Neele Ambar Par - Ash King.mp3",
+                "Thumkeshwari - Ash King.mp3",
+                "Tum Todo Na - Ash King I Sunidhi Chauhan.mp3"
+
+            ]
         },
         {
             "name": "Atif Aslam",
