@@ -240,6 +240,7 @@
                 "Jeena Jeena -Atif Aslam.mp3",
                 "Main Agar - Atif Aslam.mp3",
                 "Meri Kahani - Atif Aslam.mp3",
+                "Main Rang Sharbaton Ka - Atif Aslam I Pritam.mp3",
                 "O Meri Laila - Atif Aslam.mp3",
                 "O Saathi - Atif Aslam.mp3",
                 "PANIYON SA - Atif Aslam.mp3",
@@ -584,6 +585,7 @@
                 "Tujhe Bhula Diya - Mohit Chauhan.mp3",
                 "Tum Ho - Mohit Chauhan.mp3",
                 "Tum Se Hi - Mohit Chauhan.mp3",
+                "Tu Hi Junoon - Mohit Chauhan, Pritam.mp3",
                 "Tune Jo Na Kaha - Mohit Chauhan.mp3"
             ]
         },
@@ -633,7 +635,39 @@
         },
         {
             "name": "Pritam",
-            "songs": []
+            "songs": [
+                "Afghan Jalebi - Pritam.mp3",
+                "Allah Maaf Kare - Pritam.mp3",
+                "Badtameez Dil - PRITAM.mp3",
+                "Balam Pichkari - Pritam.mp3",
+                "Bulleya - Pritam I Amit Mishra.mp3",
+                "Chammak Challo - Pritam.mp3",
+                "Character Dheela - Pritam I Neeraj Shridhar.mp3",
+                "Chor Bazari - Pritam.mp3",
+                "DIL CHORI - Honey Singh I Pritam.mp3",
+                "Ishq Sufiyana - Pritam I Vishal - Shekhar.mp3",
+                "Judai - Pritam.mp3",
+                "Kabira - Pritam.mp3",
+                "Lat Lag Gayee - Benny Dayal I Pritam.mp3",
+                "London Thumakda - Pritam.mp3",
+                "Lutt Putt Gaya - Pritam I Arijit.mp3",
+                "Maahi - Pritam I Toshi Sharib Sabri Mohit Suri Raaz.mp3",
+                "Main Rang Sharbaton Ka - Atif Aslam I Pritam.mp3",
+                "Malang - Siddharth Mahadevan, Shilpa Rao, Pritam.mp3",
+                "Naach Meri Jaan - Pritam.mp3",
+                "Senorita - Pritam.mp3",
+                "Sharara - Asha Bhosle, Pritam, Javed Akhtar.mp3",
+                "TERA MERA RISHTA PURANA - PRITAM, SAYEED QUADRI.mp3",
+                "Teri Jhuki Nazar - Pritam I Shafqat Amanat Ali.mp3",
+                "Tu Hi Junoon - Mohit Chauhan, Pritam.mp3",
+                "Tu Hi Mera - Shafqat Amanat Ali I Pritam.mp3",
+                "Tu Hi Toh Hai - Pritam I Benny Dayal.mp3",
+                "Tum Jo Aaye - Rahat Fateh Ali Khan,Tulsi Kumar, Pritam.mp3",
+                "Tumhi Ho Bandhu - Pritam.mp3",
+                "Ye Tune Kya Kiya - Pritam.mp3",
+                "Yeh Ishq Hai - Pritam I Shreya Ghoshal.mp3"
+
+            ]
         },
         {
             "name": "Rahat Fateh Ali Khan",
