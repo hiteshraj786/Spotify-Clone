@@ -313,6 +313,7 @@
                 "Ishq Di Baajiyaan - Diljit Dosanjh.mp3",
                 "Kufar - Diljit Dosanjh.mp3",
                 "Laembadgini - Diljit Dosanjh.mp3",
+                "Lalkaara - Diljit Dosanjh.mp3",
                 "LEHNGA - DILJIT DOSANJH.mp3",
                 "Lemonade - Diljit Dosanjh.mp3",
                 "Naina - Diljit Dosanjh.mp3",
@@ -671,7 +672,9 @@
         },
         {
             "name": "Rahat Fateh Ali Khan",
-            "songs": []
+            "songs": [
+                "DIL TO BACHCHA HAI - RAHAT FATEH ALI KHAN, GULZAR, VISHAL BHARDWAJ.mp3"
+            ]
         },
         {
             "name": "Seema Mishra",
@@ -687,7 +690,9 @@
         },
         {
             "name": "Shreya Ghoshal",
-            "songs": []
+            "songs": [
+                "KALYANI - FIFTY4 RONN SHREYA GHOSHAL.mp3"
+            ]
         },
         {
             "name": "Sonu Nigam",
@@ -743,11 +748,58 @@
         },
         {
             "name": "Talwiinder",
-            "songs": []
+            "songs": [
+                "8 ASLE - SUKHA GURLEZ AKHTAR CHANI NATTAN.mp3",
+                "9 45 - Prabh Singh I Jay Trak.mp3",
+                "Aaoge Tum Kabhi - The Local Train.mp3",
+                "Aarzu - Noor, Khan, Madhurxo.mp3",
+                "Aaya Na Tu - Arjun Kanungo, Momina Mustehsan.mp3",
+                "Alag Aasmaan - Anuv Jain.mp3",
+                "Arz Kiya Hai - Aditya.mp3",
+                "Bairan - Banjaare.mp3",
+                "Dhundhala - Yashraj, Talwiinder.mp3",
+                "Dooron Dooron - Paresh Pahuja.mp3",
+                "Ehsaas - Faheem Abdullah Vaibhav Pani Hyder Dar.mp3",
+                "Finding Her - Kushagra Vanshika Bharath Karan Maini.mp3",
+                "GALLAN 4 - Talwiinder.mp3",
+                "HASEEN - TALWIINDER.mp3",
+                "Husn - Anuv Jain.mp3",
+                "Ishq de Fanniyar - Jyotica.mp3",
+                "JAQEEN - Talwiinder I RISH.mp3",
+                "Jo Tere Sang - Mustafa Zahid.mp3",
+                "Jo Tum Mere Ho - Anuv Jain.mp3",
+                "KALYANI - FIFTY4 RONN SHREYA GHOSHAL.mp3",
+                "KASHISH - Ashish Bhatia Kashish Ratnani Omkar Singh.mp3",
+                "Khat - Navjot Ahuja.mp3",
+                "KHAYAAL - Talwiinder.mp3",
+                "Kyun Dhunde - Vilen.mp3",
+                "Mann Mera - Gajendra Verma.mp3",
+                "Mi Amor - Sharn I Paul.mp3",
+                "NASHA - Talwiinder.mp3",
+                "O Sanam - Akhil Sachdeva.mp3",
+                "One Love - Shubh.mp3",
+                "Paaro - Aditya Rikhari.mp3",
+                "Pal Pal - Talwiinder.mp3",
+                "Sahiba - Aditya Rikhari.mp3",
+                "SAMJHO NA - Aditya Rikhari.mp3",
+                "Sheesha - Swara Verma Sorab Bedi Niharika Tiwari.mp3",
+                "Tere Bina Na Guzara - Josh Brar.mp3",
+                "TU - TALWIINDER.mp3",
+                "UDI UDI - Aneesh Poojari.mp3",
+                "Wishes - Talwiinder.mp3",
+                "Ye Waadiyan - Navjot Ahuja.mp3",
+                "You and Me - Shubh.mp3",
+                "Zaroor - Aparshakti Khurana I Savi Kahlon.mp3"
+
+
+
+            ]
         },
         {
             "name": "Udit Narayan",
-            "songs": []
+            "songs": [
+                "Jugraafiya - Udit Narayan I Shreya Ghoshal.mp3"
+            ]
         },
         {
             "name": "Vishal Mishra",
